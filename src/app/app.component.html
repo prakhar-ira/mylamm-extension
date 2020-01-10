@@ -53,9 +53,10 @@
   <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
   </a>
 </div>
-<div *ngIf="!showSignupPage">
-  HI ! Guest
-  <button (click)="showSignupPage =!showSignupPage">Sign Up</button>
+<div class="welcome-container" *ngIf="!showSignupPage">
+  <h3>HI ! Guest</h3>
+  <div class="welcome-text"> Welcome to myglamm</div>
+  <button class="btn btn-success" (click)="showSignupPage =!showSignupPage">Sign Up</button>
 </div>
 <app-signup *ngIf="showSignupPage"></app-signup>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
