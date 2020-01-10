@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { AccordionFormComponent } from './accordion-form/accordion-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AccordionFormComponent
   ],
   imports: [
     BrowserModule,

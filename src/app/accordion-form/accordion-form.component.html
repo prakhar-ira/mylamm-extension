@@ -1,0 +1,75 @@
+
+<style>
+    .container{
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .form-group {
+    position: relative;
+    padding-top: 1.5rem;
+  }
+  
+  label {
+    position: absolute;
+    top: 0;
+    font-size: var(--font-size-small);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+  }
+  
+  input:placeholder-shown + label {
+    opacity: 0;
+    transform: translateY(1rem);    
+  }
+
+  .text-box{
+    border: 1px solid #e3e2e1;  
+    padding: 8px 15px 8px 15px;
+    width:50%;
+    border-radius: 5px;
+  }
+  
+  .textarea-box{
+    border: 1px solid #e3e2e1;  
+    padding: 8px 15px 8px 15px;
+    width:70%;
+    border-radius: 5px;
+    font-size: var(--font-size-small);
+  }
+
+  .form-label{
+    color: #b6b6b8;
+    padding: 5px;
+    width : 20%;
+  }
+  input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 11px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 43%;
+    position: relative;
+    top: 10px;
+}
+  
+</style>
+<div class="container">
+    <div class="form-group">
+        <span for="dynamic-label-input" class="form-label"> Issue : </span>
+         <input type="text" id="dynamic-label-input" class="text-box">        
+    </div>
+    <div class="form-group">
+        <span for="dynamic-label-input" class="form-label"> Emp Id : </span>
+         <input type="text" id="dynamic-label-input" class="text-box">        
+    </div>
+    <div class="form-group">
+        <span for=" " class="form-label"> Description : </span>
+        <textarea id="textarea" class="textarea-box"></textarea>
+    </div>    
+    <input type="submit" value="Submit">
+</div>
