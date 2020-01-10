@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component, OnInit, Output,EventEmitter} from '@angular/core';
+// import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-signup',
@@ -7,11 +7,15 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
+
+  @Output() userLoggedValue = new EventEmitter();
+
   signUpObj: any = {
     empId:'',
     dept:'',
     name:''
   };
+
 
   constructor() { }
 
@@ -20,5 +24,6 @@ export class SignupComponent implements OnInit {
   submit(){
     console.log(this.signUpObj);
     localStorage.setItem('userDetail',JSON.stringify(this.signUpObj))
+    this.userLoggedValue.emit('');
   }
 }

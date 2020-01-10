@@ -8,4 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'myglamm-chrome-extension';
   showSignupPage:boolean = false;
+  isUserLoggedIn: boolean =false;
+  constructor(){
+  
+  }
+  ngOnInit(){
+    if(localStorage.getItem('userDetail')){
+      this.isUserLoggedIn = true;
+    }
+  }
+  userLogsIn(){
+    this.isUserLoggedIn = true;
+  }
 }
+
