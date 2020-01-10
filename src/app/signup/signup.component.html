@@ -1,0 +1,33 @@
+
+<div>
+    <h3>Please Enter your Myglamm email id</h3>
+<label for="department">Department</label>
+<input type="text" class="form-control" id="department"
+       required
+       [(ngModel)]="signUpObj.dept" name="name"
+       #dept="ngModel">
+<div [hidden]="dept.valid || dept.pristine"
+     class="alert alert-danger">
+     department is required
+</div>
+<label for="email">Email</label>
+<input type="text" class="form-control" id="email"
+        pattern="^[A-Za-z0-9._%+-]+@myglamm.com$"
+       required
+       [(ngModel)]="signUpObj.email" name="email"
+       #email="ngModel">
+<div [hidden]="email.valid || email.pristine"
+     class="alert alert-danger">
+     email is required
+</div>
+<label for="empId">Employee Id</label>
+<input type="text" class="form-control" id="empId"
+       required
+       [(ngModel)]="signUpObj.empId" name="empId"
+       #empId="ngModel">
+<div [hidden]="empId.valid || empId.pristine"
+     class="alert alert-danger">
+     Employee Id is required
+</div>
+<button type="button" class="btn btn-default" (click)="submit()" [disabled]="!email.valid || !empId.valid || !dept.valid">Submit</button>
+</div>
